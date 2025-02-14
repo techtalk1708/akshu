@@ -1,0 +1,32 @@
+.card{
+    width: 380px;
+    height: 550px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: lightpink;
+    justify-items: center;
+
+}
+
+.card-img{
+    width: 350px;
+    height: 450px;
+    object-fit: cover; 
+    margin: 15px;
+    border-radius: 10px;
+    transition: transform .2s; 
+
+}
+
+.card-img:hover{
+    transform: scale(1.05); 
+
+}
+
+.special-parent{
+    background-color: rgb(218, 154, 167);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

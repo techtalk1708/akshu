@@ -1,0 +1,57 @@
+.surprise-parent {
+    background-color: rgb(218, 154, 167);
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.simple-table {
+    border-collapse: collapse;
+}
+
+.simple-table td,
+.simple-table th {
+    /* border: 1px solid black; */
+    width: 225px;
+    height: 225px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-container {
+    position: relative; 
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.table-img {
+    width: 225px;
+    height: 225px;
+    position: relative;  /* Image stays on top */
+    z-index: 2;
+    object-fit: cover;
+    display: block;
+}
+
+.table-text {
+    position: absolute;  /* This allows text to layer behind the image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;  /* Text goes behind the image */
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; 
+}
+
+.table-img:hover {
+    opacity: 0.2;
+    transition:opacity 1s;
+  }
