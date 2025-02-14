@@ -2,40 +2,6 @@ import React from 'react';
 import './surprise.css';
 
 function Surprise() {
-  const images = [
-    './1.jpg',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100',
-    'https://via.placeholder.com/100'
-  ];
-
-  const tableStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    border: '2px solid #000',
-    width: 'max-content'
-  };
-
-  const imageContainerStyle = {
-    width: '100px',
-    height: '100px',
-    border: '2px solid #000',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  };
-
-  const imageStyle = {
-    width: '90%',
-    height: '90%',
-    objectFit: 'cover'
-  };
-
   return (
     <div className='surprise-parent'>
       <table className='simple-table'>

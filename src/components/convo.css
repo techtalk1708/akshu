@@ -1,0 +1,80 @@
+/* Base styling */
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(218, 154, 167);
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.child {
+    background-color: lightpink;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px; /* Maximum width for larger screens */
+    font-size: 16px; /* Default font size */
+    line-height: 1.8;
+    text-align: left;
+    color: #333;
+}
+
+/* Styling for speaker names */
+b {
+    color: purple;
+}
+
+i {
+    color: #555;
+}
+
+/* Styling for large screens */
+@media (min-width: 1024px) {
+    .child {
+        font-size: 18px; /* Larger font size for larger screens */
+        padding: 30px;
+    }
+}
+
+/* Styling for tablets */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .parent {
+        padding: 15px; /* Adjust padding for tablets */
+    }
+
+    .child {
+        font-size: 16px; /* Adjust font size for tablets */
+        padding: 20px;
+    }
+}
+
+/* Styling for small screens (mobile phones) */
+@media (max-width: 768px) {
+    .parent {
+        padding: 10px; /* Reduced padding for small screens */
+    }
+
+    .child {
+        font-size: 14px; /* Smaller font size for mobile screens */
+        padding: 15px;
+    }
+
+    /* Adjust the text to be more readable on mobile */
+    .child p {
+        line-height: 1.6;
+    }
+}
+
+/* Styling for very small devices (extra small phones) */
+@media (max-width: 480px) {
+    .child {
+        font-size: 12px; /* Further reduced font size */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .child p {
+        line-height: 1.5; /* Tighten line height for smaller screens */
+    }
+}

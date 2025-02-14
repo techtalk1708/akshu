@@ -1,44 +1,111 @@
-.parent{
+/* Base styles */
+.parent {
     width: 100%;
     height: fit-content;
     align-content: center;
     background-color: rgb(218, 154, 167);
     line-height: 25px;
+    padding: 10px;
 }
 
-.child{
+.child {
     display: flex;
     padding: 20px;
     flex-direction: column;
     width: 90%;
     background-color: lightpink;
     border-radius: 10px;
-    margin:auto;
+    margin: auto;
 }
 
-.btn-list{
+.btn-list {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
-.btns3{
-    width: 150px;
+.btns3 {
+    width: 250px;
     padding: 8px;
     border: 0;
     border-radius: 5px;
     transition: transform .3s;
+    font-size: 12px;
 }
 
-.btns3:hover{
-    width: 150px;
-    padding: 8px;
-    border: 0;
-    border-radius: 5px;
+.btns3:hover {
     cursor: pointer;
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
 
-.lh{
-    line-height: 30px;
+/* Styling for large screens */
+@media (min-width: 1024px) {
+    .child {
+        width: 70%; /* Adjust child width for larger screens like laptops and desktops */
+        padding: 30px;
+    }
+
+    .btns3 {
+        font-size: 16px;
+    }
+
+    .parent {
+        padding: 20px;
+    }
+}
+
+/* Styling for tablets */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .child {
+        width: 80%; /* Make child container a bit smaller on tablets */
+        padding: 25px;
+    }
+
+    .btns3 {
+        font-size: 16px;
+    }
+}
+
+/* Styling for small screens (mobile phones) */
+@media (max-width: 768px) {
+    .child {
+        width: 90%; /* Make child container almost full-width on mobile */
+        padding: 15px;
+    }
+
+    .btns3 {
+        width: 100%; /* Make buttons full-width on mobile */
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .parent {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h3, p {
+        font-size: 16px; /* Smaller font sizes for smaller screens */
+    }
+}
+
+/* Additional mobile styling for very small devices */
+@media (max-width: 480px) {
+    .btns3 {
+        width: 100%; /* Full-width buttons on very small screens */
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h3, p {
+        font-size: 14px;
+    }
 }
